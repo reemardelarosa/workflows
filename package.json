@@ -4,7 +4,7 @@
   "description": "A project showcase workflows",
   "repository": {
     "type": "git",
-    "url": "?.git"
+    "url": "https://github.com/reemardelarosa/workflows.git"
   },
   "keywords": [
     "Power"
@@ -13,6 +13,7 @@
   "license": "",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-coffee": "^2.3.1",
     "gulp-util": "^3.0.7"
   }
 }
