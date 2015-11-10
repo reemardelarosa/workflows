@@ -10,5 +10,9 @@
     "Power"
   ],
   "author": "John Reemar Dela Rosa",
-  "license": "MIT"
+  "license": "",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7"
+  }
 }
