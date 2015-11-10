@@ -1,0 +1,14 @@
+{
+  "name": "workflow",
+  "version": "0.0.1",
+  "description": "A project showcase workflows",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "keywords": [
+    "Power"
+  ],
+  "author": "John Reemar Dela Rosa",
+  "license": "MIT"
+}
