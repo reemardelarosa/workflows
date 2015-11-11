@@ -35,8 +35,6 @@ var pixgrid = function() {
         }, !1);
     }
 }();
-},{}]},{},[1])
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var $, fill;
 
 $ = require('jquery');
@@ -47,7 +45,17 @@ $ = require('jquery');
 
 fill;
 
-},{"jquery":2}],2:[function(require,module,exports){
+$(function() {
+  var Mustache = require('mustache');
+ 
+  $.getJSON('js/data.json', function(data) {
+    var template = $('#speakerstpl').html();
+    var html = Mustache.to_html(template, data);
+    $('#speakers').html(html);    
+  }); //getJSON
+  
+}); //function
+},{"jquery":2,"mustache":3}],2:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -9259,19 +9267,7 @@ return jQuery;
 
 }));
 
-},{}]},{},[1])
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-$(function() {
-  var Mustache = require('mustache');
- 
-  $.getJSON('js/data.json', function(data) {
-    var template = $('#speakerstpl').html();
-    var html = Mustache.to_html(template, data);
-    $('#speakers').html(html);    
-  }); //getJSON
-  
-}); //function
-},{"mustache":2}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 /*!
  * mustache.js - Logic-less {{mustache}} templates with JavaScript
  * http://github.com/janl/mustache.js
